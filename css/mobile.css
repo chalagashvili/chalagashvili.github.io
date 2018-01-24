@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+@import url(http://fonts.googleapis.com/css?family=Quicksand);
+
+html, body {
+    width: 640px;
+    height: 100%;
+    overflow: hidden;
+    background: url("../image/mobile/common/background.jpg") no-repeat;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 1px #fff;
+    line-height: 34pt;
+    color: #5b747a;
+}
+
+/* common */
+
+h2 {
+    font-size: 36pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 28pt;
+    text-align: center;
+}
+
+.page {
+    position: absolute;
+    display: none;
+    width: 640px;
+    height: 100%;
+}
+
+.logo {
+    display: block;
+    margin: 20px auto;
+}
+
+.button {
+    display: block;
+    width: 593px;
+    height: 152px;
+    margin: 0 auto;
+}
+
+/* loading */
+
+#loading #animation {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 200px auto;
+}
+
+/* welcome */
+
+#welcome p {
+    margin-top: 40px;
+}
+
+#welcome #play-button {
+    margin-top: 80px;
+}
+
+/* login */
+
+#login p:nth-child(1) {
+    margin-top: 40px;
+}
+
+#login #facebook-connect-button {
+    margin-top: 40px;
+}
+
+#login #username-input {
+    display: block;
+    width: 600px;
+    height: 152px;
+    margin: 40px auto;
+    padding: 0;
+    
+    font-size: 52pt;
+    text-align: center;    
+}
+
+#login #submit-button {
+    margin-top: 40px;
+}
+
+/* game */
+
+#game {
+    background: url("../image/mobile/common/background.jpg");
+    background-size: cover;
+}
+
+#game #score {
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 100%;
+    margin-top: -100px;
+    
+    font-size: 34pt;
+    text-align: center;
+    opacity: 0;
+}
+
+#gameCanvas {
+    position: absolute;
+}
+
+/* game-over */
+
+#game-over p:nth-child(1) {
+    margin-top: 40px;
+}
+
+#game-over #replay-button {
+    margin-top: 40px;
+}
+
+#game-over #facebook-share-button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+    font-size: 32pt;
+}
+
+#game-over #success {
+    display: none;
+}
+
+/* highscore */
+
+#highscore h2 {
+    margin-top: 20px;
+}
+
+#highscore ol {
+    margin: 20px 30px 0 30px;    
+    counter-reset: my-counter;
+}
+
+#highscore ol li:before {
+    display: inline-block;
+    width: 50px;
+    content: counter(my-counter);
+	counter-increment: my-counter;
+    font-weight: bold;
+    text-align: center;
+}
+
+#highscore ol li {
+    height: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #5b747a;
+    
+    font-size: 26pt;
+}
+
+#highscore ol li img {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    vertical-align: middle;
+    background: #fff;
+    border: 1px solid #5b747a;
+}
+
+#highscore ol li .name {
+    margin-left: 20px;
+}
+
+#highscore ol li .score {
+    float: right;
+}
+
+#highscore #loading {
+    display: block;
+    width: 128px;
+    height: 128px;
+    margin: 200px auto;
+}
+
+#highscore #fallback {
+    display: none;
+    color: #ff0000;
+    margin: 20px 0 40px 0;
+}
